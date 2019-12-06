@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pharmacap</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script src="js/jquery.js"> </script>
+    <script src="js/bootstrap.js"> </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-1 text-center"> PharmaCap </h1>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <ul id="verb-list" role="tablist" class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#program" role="tab"> Program </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#test" role="tab"> Test </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="program" role="tabpanel">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="drug"> Prescribed Drug </label>
+                                        <select id="drug" name="drug" placeholder="Pick a drug" class="form-control form-control-lg">
+                                            <option value="oxycodone"> Oxycodone </option>
+                                            <option value="hydrocodone"> Hydrocodone </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="bmi"> BMI </label>
+                                        <input type="text" name="bmi" id="bmi" class="form-control form-control-lg" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sex"> Sex </label>
+                                        <select id="sex" name="sex" placeholder="sex" class="form-control form-control-lg">
+                                            <option value="female"> Female </option>
+                                            <option value="male"> Male </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-block btn-lg btn-warning"> Program Cap </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="test" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> LED Test </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> 7-Segment Test </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> LED Color Test </button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> Pushbutton Test </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> Rapid Model Test </button>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-block btn-lg btn-warning"> Rainbow Demo </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script>
+        $('#verb-list a').on('click', function (e) {
+            console.log("blah")
+              e.preventDefault()
+              $(this).tab('show')
+        })
+    </script>
+  </body>
+</html>
